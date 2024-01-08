@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:meals_app/screens/tabs.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MealsApp()));
 }
 
 final theme = ThemeData(
@@ -14,8 +15,8 @@ final theme = ThemeData(
     ),
     textTheme: GoogleFonts.latoTextTheme());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MealsApp extends StatelessWidget {
+  const MealsApp({super.key});
 
   // This widget is the root of your application.
   @override
